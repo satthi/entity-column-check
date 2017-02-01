@@ -14,7 +14,6 @@
     <testsuites>
         <testsuite name="All Tests">
             <directory>./tests/TestCase/Model/Table/PostsTableTest.php</directory>
-            <directory>./tests/TestCase/Validation/ContentsFileValidationTest.php</directory>
         </testsuite>
         <!-- Add plugin test suites here. -->
     </testsuites>
