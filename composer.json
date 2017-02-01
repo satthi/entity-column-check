@@ -1,0 +1,39 @@
+{
+    "name": "satthi/entity-column-check",
+    "description": "CakePHP EntityColumnCheck",
+    "type": "cakephp-plugin",
+    "keywords": ["cakephp", "file"],
+    "homepage": "https://github.com/satthi/entity-column-check",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Satoru Hagiwara",
+            "role": "Author"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/satthi/entity-column-check"
+    },
+    "require": {
+        "cakephp/cakephp": "~3.0"
+    },
+    "require-dev": {
+        "cakephp/cakephp-codesniffer": "dev-master",
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "EntityColumnCheck\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "EntityColumnCheck\\Test\\": "tests",
+            "EntityColumnCheck\\Test\\App\\": "tests/test_app/App"
+        }
+    },
+    "suggest": {
+    },
+    "extra": {
+    }
+}
