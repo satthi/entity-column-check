@@ -1,5 +1,8 @@
 # entity-column-check
 
+[![Build Status](https://travis-ci.org/satthi/entity-column-check.svg?branch=master)](https://travis-ci.org/satthi/entity-column-check)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/satthi/entity-column-check/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/satthi/entity-column-check/?branch=master)
+
 このプラグインはCakePHP3のEntityにおいて
 
 - プロパティに設定されているもの
