@@ -3,6 +3,7 @@
 namespace EntityColumnCheck\Model\Entity;
 
 use Cake\Network\Exception\InternalErrorException;
+use Cake\Utility\Inflector;
 
 trait EntityColumnCheckTrait
 {
@@ -34,6 +35,16 @@ trait EntityColumnCheckTrait
 
         // プロパティが設定されている場合はOK
         if (property_exists($this, $property)) {
+            return;
+        }
+
+        // getterがセットされている場合はOK
+        $snakeMethod = '_get' . Inflector::underscore($property);
+        $titleMethod = '_get' . ucfirst($property);
+        if (
+            method_exists($this, $snakeMethod ) ||
+            method_exists($this, $titleMethod )
+        ) {
             return;
         }
 
