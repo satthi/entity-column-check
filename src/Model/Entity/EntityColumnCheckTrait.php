@@ -2,6 +2,7 @@
 
 namespace EntityColumnCheck\Model\Entity;
 
+use Cake\Core\Configure;
 use Cake\Network\Exception\InternalErrorException;
 use Cake\Utility\Inflector;
 
@@ -13,6 +14,10 @@ trait EntityColumnCheckTrait
      */
     private function getEntityColumnCheck($property)
     {
+        // debug時のみ発動する
+        if (!Configure::read('debug')) {
+            return;
+        }
         // 設定されていなくても例外的にOKとするメソッド
         $exceptOkProperties = [
             'entityColumnCheckAllowField',
