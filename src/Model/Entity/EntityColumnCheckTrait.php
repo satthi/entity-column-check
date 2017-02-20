@@ -45,10 +45,10 @@ trait EntityColumnCheckTrait
 
         // getterがセットされている場合はOK
         $snakeMethod = '_get' . Inflector::underscore($property);
-        $titleMethod = '_get' . ucfirst($property);
+        $camelMethod = '_get' . Inflector::camelize($property);
         if (
             method_exists($this, $snakeMethod ) ||
-            method_exists($this, $titleMethod )
+            method_exists($this, $camelMethod )
         ) {
             return;
         }
